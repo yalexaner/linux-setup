@@ -1,0 +1,46 @@
+# !/bin/bash
+
+# Grub
+echo Open grub settings? (y/n)
+read action
+
+if [$action = y]
+then
+    sudo vim /etc/default/grub || sudo nano /etc/default/grub
+    sudo update-grub
+fi
+
+# Network connction
+echo Configure internet connection?
+read action
+
+if [$action = y]
+then
+    pppoeconf
+fi
+
+# Turning off useful services
+echo Disable useless services?
+read action
+
+if [$action = y]
+then
+    sudo apt-get install bum
+    sudo bum
+fi
+
+# Installing apps
+clear
+echo Installing apps
+
+scripts/install_apps
+
+# Configure Yandex.Disk
+clear
+echo Configure Yandex.Disk
+
+login=yachmenev.aleksandr@yandex.ru
+read -sp "Yandex.Disk's password: " pass
+path=/home/alexander/home
+
+echo -e "n\n$login\n$pass\n$path\ny" | yandex-disk setup

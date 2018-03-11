@@ -1,0 +1,115 @@
+# !/bin/bash
+# Yandex.Disk
+echo Yandex.Disk
+
+wget -qO - https://repo.yandex.ru/yandex-disk/YANDEX-DISK-KEY.GPG | sudo apt-key add -
+echo "deb https://repo.yandex.ru/yandex-disk/deb/ stable main" | sudo tee /etc/apt/sources.list.d/yandex-disk.list
+sudo apt-get update
+sudo apt-get install yandex-disk
+# sudo dpkg -i ../apps/yandex-disk_latest_amd64.deb >progress.txt
+
+# Opera
+echo Opera
+sudo dpkg -i ../apps/opera-stable_51.0.2830.55_amd64.deb >progress.txt
+
+# Telegram
+echo Telegram
+
+tar -xJf ../apps/tsetup.1.2.6.tar.xz
+mv Telegram $HOME
+
+# Sublime Text 3
+echo Sublime Text 3
+
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+sudo apt-get install apt-transport-https
+echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+sudo apt-get update
+sudo apt-get install sublime-text
+
+# VS Code
+echo VS Code
+sudo dpkg -i ../apps/code_1.21.0-1520420608_amd64.deb >progress.txt
+
+# Git
+echo Git
+sudo apt-get install git
+
+# Python Pip
+echo Pip
+sudo apt-get install python3-pip
+
+# Vim
+echo Vim
+sudo apt-get install vim
+
+# Sporify
+echo Spotify
+
+KEYSERVER="hkp://keyserver.ubuntu.com:80"
+KEY="0DF731E45CE24F27EEEB1450EFDC8610341D9410"
+
+sudo apt-key adv --keyserver $KEYSERVER --recv-keys $KEY
+
+REP_URL="http://repository.spotify.com"
+REP_PATH="/etc/apt/sources.list.d/spotify.list"
+
+echo deb $REP_URL stable non-free | sudo tee $REP_PATH
+sudo apt-get update
+sudo apt-get install spotify-client
+
+# Anki
+echo Anki
+
+tar -xjf ../apps/anki-2.0.50-amd64.tar.bz2
+cd anki-2.0.50
+sudo make install >progress.txt
+cd ..
+rm -rf anki-2.0.50
+
+# mplayer (for Anki)
+sudo apt-get install mplayer
+
+# Okular
+echo Okular
+sudo apt-get install okular
+
+# Kid3
+echo Kid3
+sudo apt-get install kid3
+
+# VLC
+echo VLC
+sudo apt-get install vlc browser-plugin-vlc
+
+# Yandex.Browser
+echo Yandex.Browser
+
+wget -qO - https://repo.yandex.ru/yandex-browser/YANDEX-BROWSER-KEY.GPG | sudo apt-key add -
+echo "deb https://repo.yandex.ru/yandex-browser/deb/ beta main" | sudo tee /etc/apt/sources.list.d/yandex-browser.list
+sudo apt-get update
+sudo apt-get install yandex-browser
+# sudo dpkg -i ../apps/Yandex.deb >progress.txt
+
+# Chrome
+echo Chrome
+sudo dpkg -i ../apps/google-chrome-stable_current_amd64.deb >progress.txt
+
+# 4K Downloader
+echo 4K Downloader
+sudo dpkg -i ../apps/4kvideodownloader_4.4.2-1_amd64.deb >progress.txt
+
+# MEGA Sync
+echo MEGA Sync
+sudo dpkg -i ../apps/megasync-xUbuntu_16.04_amd64.deb >progress.txt
+
+# Firefox
+echo Firefox
+tar -xjf ../apps/firefox-58.0.2.tar.bz2
+mv firefox $HOME
+
+# My Apps
+echo My Apps
+
+tar -xjf ../apps/my_apps.tar.bz2
+mv my_../apps/* $HOME
