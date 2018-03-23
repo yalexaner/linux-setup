@@ -27,6 +27,10 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 sudo apt-get update
 sudo apt-get install sublime-text
 
+# Mailspring
+echo Mailspring
+sudo dpkg -i ../apps/mailspring-1.1.5-amd64.deb >progress.txt
+
 # VS Code
 echo VS Code
 sudo dpkg -i ../apps/code_1.21.0-1520420608_amd64.deb >progress.txt
