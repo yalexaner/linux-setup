@@ -3,7 +3,7 @@
 echo Configure Yandex.Disk
 
 login=yachmenev.aleksandr@yandex.ru
-read -sp "Yandex.Disk's password: " pass
+read -p "Yandex.Disk's password: " pass
 path=/home/alexander/home
 
 echo -e "n\n$login\n$pass\n$path\ny" | yandex-disk setup
@@ -11,8 +11,18 @@ echo -e "n\n$login\n$pass\n$path\ny" | yandex-disk setup
 # Git
 echo Configure Git
 
-read -sp "username: " username
-read -sp "email: " email
+read -p "username (leave empty for default): " username
+read -p "email (leave empty for default): " email
+
+if [ -z $username ]
+then
+    username='yalexaner'
+fi
+
+if [ -z $email ]
+then
+    email='yachmenev.aleksandr2000@gmail.com'
+fi
 
 git config --global user.name $username
 git config --global user.email $email
