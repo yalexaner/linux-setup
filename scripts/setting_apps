@@ -1,0 +1,19 @@
+#!/bin/bash
+# Yandex.Disk
+echo Configure Yandex.Disk
+
+login=yachmenev.aleksandr@yandex.ru
+read -sp "Yandex.Disk's password: " pass
+path=/home/alexander/home
+
+echo -e "n\n$login\n$pass\n$path\ny" | yandex-disk setup
+
+# Git
+echo Configure Git
+
+read -sp "username: " username
+read -sp "email: " email
+
+git config --global user.name $username
+git config --global user.email $email
+git config --global core.editor vim
