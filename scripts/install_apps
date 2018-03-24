@@ -1,4 +1,4 @@
-# !/bin/bash
+#!/bin/bash
 # Yandex.Disk
 echo Yandex.Disk
 
@@ -7,6 +7,15 @@ echo "deb https://repo.yandex.ru/yandex-disk/deb/ stable main" | sudo tee /etc/a
 sudo apt-get update
 sudo apt-get install yandex-disk
 # sudo dpkg -i ../apps/yandex-disk_latest_amd64.deb >progress.txt
+
+# Yandex.Browser
+echo Yandex.Browser
+
+wget -qO - https://repo.yandex.ru/yandex-browser/YANDEX-BROWSER-KEY.GPG | sudo apt-key add -
+echo "deb https://repo.yandex.ru/yandex-browser/deb/ beta main" | sudo tee /etc/apt/sources.list.d/yandex-browser.list
+sudo apt-get update
+sudo apt-get install yandex-browser
+# sudo dpkg -i ../apps/Yandex.deb >progress.txt
 
 # Opera
 echo Opera
@@ -78,39 +87,13 @@ sudo apt-get install mplayer
 echo Okular
 sudo apt-get install okular
 
-# Kid3
-echo Kid3
-sudo apt-get install kid3
-
 # VLC
 echo VLC
 sudo apt-get install vlc browser-plugin-vlc
 
-# Yandex.Browser
-echo Yandex.Browser
-
-wget -qO - https://repo.yandex.ru/yandex-browser/YANDEX-BROWSER-KEY.GPG | sudo apt-key add -
-echo "deb https://repo.yandex.ru/yandex-browser/deb/ beta main" | sudo tee /etc/apt/sources.list.d/yandex-browser.list
-sudo apt-get update
-sudo apt-get install yandex-browser
-# sudo dpkg -i ../apps/Yandex.deb >progress.txt
-
-# Chrome
-echo Chrome
-sudo dpkg -i ../apps/google-chrome-stable_current_amd64.deb >progress.txt
-
-# 4K Downloader
-echo 4K Downloader
-sudo dpkg -i ../apps/4kvideodownloader_4.4.2-1_amd64.deb >progress.txt
-
 # MEGA Sync
 echo MEGA Sync
 sudo dpkg -i ../apps/megasync-xUbuntu_16.04_amd64.deb >progress.txt
-
-# Firefox
-echo Firefox
-tar -xjf ../apps/firefox-58.0.2.tar.bz2
-mv firefox $HOME
 
 # My Apps
 echo My Apps
