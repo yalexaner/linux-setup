@@ -1,5 +1,5 @@
 #!/bin/bash
-help_message="Availible programs: kid3, chrome, 4kdown, firefox."
+help_message="Availible programs: kid3, chrome, 4kdown, firefox, heroku."
 
 if [ "$1" == "--help" ] || [ "$1" == "-h" ]
 then
@@ -14,5 +14,11 @@ case $1 in
     'firefox')
         tar -xjf ../apps/firefox-58.0.2.tar.bz2
         mv firefox $HOME
+        ;;
+    'heroku')
+        sudo add-apt-repository "deb https://cli-assets.heroku.com/branches/stable/apt ./"
+        curl -L https://cli-assets.heroku.com/apt/release.key | sudo apt-key add -
+        sudo apt-get update
+        sudo apt-get install heroku
         ;;
 esac
