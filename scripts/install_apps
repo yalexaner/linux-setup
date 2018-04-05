@@ -24,8 +24,9 @@ sudo dpkg -i ../apps/opera-stable_51.0.2830.55_amd64.deb >progress.txt
 # Telegram
 echo Telegram
 
-tar -xJf ../apps/tsetup.1.2.6.tar.xz
-mv Telegram $HOME
+# tar -xJf ../apps/tsetup.1.2.6.tar.xz
+# mv Telegram $HOME
+sudo snap install telegram-desktop
 
 # Sublime Text 3
 echo Sublime Text 3
@@ -38,11 +39,13 @@ sudo apt-get install sublime-text
 
 # Mailspring
 echo Mailspring
-sudo dpkg -i ../apps/mailspring-1.1.5-amd64.deb >progress.txt
+# sudo dpkg -i ../apps/mailspring-1.1.5-amd64.deb >progress.txt
+sudo snap install mailspring
 
 # VS Code
 echo VS Code
-sudo dpkg -i ../apps/code_1.21.0-1520420608_amd64.deb >progress.txt
+# sudo dpkg -i ../apps/code_1.21.0-1520420608_amd64.deb >progress.txt
+sudo snap install vscode
 
 # Git
 echo Git
@@ -59,17 +62,18 @@ sudo apt-get install vim
 # Sporify
 echo Spotify
 
-KEYSERVER="hkp://keyserver.ubuntu.com:80"
-KEY="0DF731E45CE24F27EEEB1450EFDC8610341D9410"
+# KEYSERVER="hkp://keyserver.ubuntu.com:80"
+# KEY="0DF731E45CE24F27EEEB1450EFDC8610341D9410"
 
-sudo apt-key adv --keyserver $KEYSERVER --recv-keys $KEY
+# sudo apt-key adv --keyserver $KEYSERVER --recv-keys $KEY
 
-REP_URL="http://repository.spotify.com"
-REP_PATH="/etc/apt/sources.list.d/spotify.list"
+# REP_URL="http://repository.spotify.com"
+# REP_PATH="/etc/apt/sources.list.d/spotify.list"
 
-echo deb $REP_URL stable non-free | sudo tee $REP_PATH
-sudo apt-get update
-sudo apt-get install spotify-client
+# echo deb $REP_URL stable non-free | sudo tee $REP_PATH
+# sudo apt-get update
+# sudo apt-get install spotify-client
+sudo snap install spotify
 
 # Anki
 echo Anki
@@ -85,11 +89,13 @@ sudo apt-get install mplayer
 
 # Okular
 echo Okular
-sudo apt-get install okular
+# sudo apt-get install okular
+sudo snap install okular
 
 # VLC
 echo VLC
-sudo apt-get install vlc browser-plugin-vlc
+# sudo apt-get install vlc browser-plugin-vlc
+sudo snap install vlc
 
 # MEGA Sync
 echo MEGA Sync

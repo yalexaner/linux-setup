@@ -12,13 +12,15 @@ case $1 in
     'chrome') sudo dpkg -i ../apps/google-chrome-stable_current_amd64.deb >progress.txt;;
     '4kdown') sudo dpkg -i ../apps/4kvideodownloader_4.4.2-1_amd64.deb >progress.txt;;
     'firefox')
-        tar -xjf ../apps/firefox-58.0.2.tar.bz2
-        mv firefox $HOME
+        # tar -xjf ../apps/firefox-58.0.2.tar.bz2
+        # mv firefox $HOME
+        sudo snap install firefox
         ;;
     'heroku')
-        sudo add-apt-repository "deb https://cli-assets.heroku.com/branches/stable/apt ./"
-        curl -L https://cli-assets.heroku.com/apt/release.key | sudo apt-key add -
-        sudo apt-get update
-        sudo apt-get install heroku
+        # sudo add-apt-repository "deb https://cli-assets.heroku.com/branches/stable/apt ./"
+        # curl -L https://cli-assets.heroku.com/apt/release.key | sudo apt-key add -
+        # sudo apt-get update
+        # sudo apt-get install heroku
+        sudo snap install heroku
         ;;
 esac
