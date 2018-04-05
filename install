@@ -1,5 +1,5 @@
 #!/bin/bash
-help_message="Availible programs: kid3, chrome, 4kdown, firefox, heroku."
+help_message="Availible programs: kid3, chrome, 4kdown, firefox, heroku, simplenote, atom, corebird, gitkraken, tizonia."
 
 if [ "$1" == "--help" ] || [ "$1" == "-h" ]
 then
@@ -23,4 +23,14 @@ case $1 in
         # sudo apt-get install heroku
         sudo snap install heroku
         ;;
+    'simplenote')
+        sudo snap install simplenote;;
+    'atom')
+        sudo snap install atom;;
+    'corebird')
+        sudo snap install corebird;;
+    'gitkraken')
+        sudo snap install gitkraken;;
+    'tizonia')
+        sudo snap install tizonia;;
 esac
