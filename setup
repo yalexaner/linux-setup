@@ -1,8 +1,9 @@
 #!/bin/bash
 
 # Grub
-echo "Open grub settings? (y/n)"
-read action
+clear
+
+read -p "Open grub settings? (y/n): " action
 
 if [[ $action = 'y' ]]
 then
@@ -13,8 +14,7 @@ fi
 clear
 
 # Network connction
-echo "Configure internet connection?"
-read action
+read -p "Configure internet connection? (y/n): " action
 
 if [[ $action = 'y' ]]
 then
@@ -24,8 +24,7 @@ fi
 clear
 
 # Turning off useful services
-echo "Disable useless services?"
-read action
+read -p "Disable useless services? (y/n): " action
 
 if [[ $action = 'y' ]]
 then
