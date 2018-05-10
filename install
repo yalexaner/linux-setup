@@ -1,36 +1,22 @@
 #!/bin/bash
+
 help_message="Availible programs: kid3, chrome, 4kdown, firefox, heroku, simplenote, atom, corebird, gitkraken, tizonia."
 
-if [ "$1" == "--help" ] || [ "$1" == "-h" ]
+if [[ $1 == "--help" || $1 == "-h" ]]
 then
     echo -e $help_message
     exit 0
 fi
 
 case $1 in
-    'kid3') sudo apt-get install kid3;;
-    'chrome') sudo dpkg -i ../apps/google-chrome-stable_current_amd64.deb >progress.txt;;
-    '4kdown') sudo dpkg -i ../apps/4kvideodownloader_4.4.2-1_amd64.deb >progress.txt;;
-    'firefox')
-        # tar -xjf ../apps/firefox-58.0.2.tar.bz2
-        # mv firefox $HOME
-        sudo snap install firefox
-        ;;
-    'heroku')
-        # sudo add-apt-repository "deb https://cli-assets.heroku.com/branches/stable/apt ./"
-        # curl -L https://cli-assets.heroku.com/apt/release.key | sudo apt-key add -
-        # sudo apt-get update
-        # sudo apt-get install heroku
-        sudo snap install heroku
-        ;;
-    'simplenote')
-        sudo snap install simplenote;;
-    'atom')
-        sudo snap install atom;;
-    'corebird')
-        sudo snap install corebird;;
-    'gitkraken')
-        sudo snap install gitkraken;;
-    'tizonia')
-        sudo snap install tizonia;;
+    'kid3')       sudo apt-get install kid3;;
+    'chrome')     sudo dpkg -i ../apps/google-chrome-stable_current_amd64.deb >progress.txt;;
+    '4kdown')     sudo dpkg -i ../apps/4kvideodownloader_4.4.2-1_amd64.deb >progress.txt;;
+    'firefox')    sudo snap install firefox;;
+    'heroku')     sudo snap install heroku;;
+    'simplenote') sudo snap install simplenote;;
+    'atom')       sudo snap install atom;;
+    'corebird')   sudo snap install corebird;;
+    'gitkraken')  sudo snap install gitkraken;;
+    'tizonia')    sudo snap install tizonia;;
 esac
