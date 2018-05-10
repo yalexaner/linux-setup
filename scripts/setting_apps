@@ -2,13 +2,7 @@
 
 # Yandex.Disk
 echo "Configuring Yandex.Disk"
-
-login=yachmenev.aleksandr@yandex.ru
-read -p "Yandex.Disk's password: " pass
-path=/home/alexander/home
-
-echo -e "n\n$login\n$pass\n$path\ny" | yandex-disk setup
-
+yandex-disk setup
 clear
 
 # Git
