@@ -9,6 +9,8 @@ path=/home/alexander/home
 
 echo -e "n\n$login\n$pass\n$path\ny" | yandex-disk setup
 
+clear
+
 # Git
 echo "Configuring Git"
 

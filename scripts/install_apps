@@ -8,6 +8,8 @@ echo "deb https://repo.yandex.ru/yandex-disk/deb/ stable main" | sudo tee /etc/a
 sudo apt-get update
 sudo apt-get install yandex-disk
 
+clear
+
 # Yandex.Browser
 echo "Yandex.Browser"
 
@@ -16,13 +18,17 @@ echo "deb https://repo.yandex.ru/yandex-browser/deb/ beta main" | sudo tee /etc/
 sudo apt-get update
 sudo apt-get install yandex-browser
 
+clear
+
 # Opera
 echo "Opera"
 sudo dpkg -i ../apps/opera-stable_51.0.2830.55_amd64.deb >progress.txt
+clear
 
 # Telegram
 echo "Telegram"
 sudo snap install telegram-desktop
+clear
 
 # Sublime Text 3
 echo "Sublime Text 3"
@@ -33,29 +39,37 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 sudo apt-get update
 sudo apt-get install sublime-text
 
+clear
+
 # Mailspring
 echo "Mailspring"
 sudo snap install mailspring
+clear
 
 # VS Code
 echo "VS Code"
 sudo snap install vscode
+clear
 
 # Git
 echo "Git"
 sudo apt-get install git
+clear
 
 # Python Pip
 echo "Pip"
 sudo apt-get install python3-pip
+clear
 
 # Vim
 echo "Vim"
 sudo apt-get install vim
+clear
 
 # Sporify
 echo "Spotify"
 sudo snap install spotify
+clear
 
 # Anki
 echo "Anki"
@@ -69,17 +83,22 @@ rm -rf anki-2.0.50
 # mplayer (for Anki)
 sudo apt-get install mplayer
 
+clear
+
 # Okular
 echo "Okular"
 sudo snap install okular
+clear
 
 # VLC
 echo "VLC"
 sudo snap install vlc
+clear
 
 # MEGA Sync
 echo "MEGA Sync"
 sudo dpkg -i ../apps/megasync-xUbuntu_16.04_amd64.deb >progress.txt
+clear
 
 # My Apps
 echo "My Apps"
