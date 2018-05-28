@@ -23,4 +23,5 @@ case $1 in
     'tusk')       sudo snap install tusk;;
     'brave')      sudo snap install brave;;
     'wavebox')    sudo snap install wavebox;;
+    'zenkit')     sudo snap install zenkit;;
 esac
