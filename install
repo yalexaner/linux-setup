@@ -1,10 +1,8 @@
 #!/bin/bash
 
-help_message="Availible programs: kid3, chrome, 4kdown, firefox, heroku, simplenote, atom, corebird, gitkraken, tizonia, ora, tusk, brave, wavebox, typora, anoise, cloudcross."
-
 if [[ $1 == "--help" || $1 == "-h" ]]
 then
-    echo -e $help_message
+    cat .help_message
     exit 0
 fi
 
