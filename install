@@ -1,6 +1,6 @@
 #!/bin/bash
 
-help_message="Availible programs: kid3, chrome, 4kdown, firefox, heroku, simplenote, atom, corebird, gitkraken, tizonia, ora, tusk, brave, wavebox."
+help_message="Availible programs: kid3, chrome, 4kdown, firefox, heroku, simplenote, atom, corebird, gitkraken, tizonia, ora, tusk, brave, wavebox, typora, anoise, cloudcross."
 
 if [[ $1 == "--help" || $1 == "-h" ]]
 then
@@ -24,4 +24,17 @@ case $1 in
     'brave')      sudo snap install brave;;
     'wavebox')    sudo snap install wavebox;;
     'zenkit')     sudo snap install zenkit;;
+    'typora')
+                  sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA300B7755AFCFAE
+                  sudo add-apt-repository 'deb https://typora.io/linux ./'
+                  sudo apt-get update
+                  sudo apt-get install typora;;
+    'anoise')
+                  sudo add-apt-repository ppa:costales/anoise
+                  sudo apt-get update
+                  sudo apt-get install anoise;;
+    'cloudcross')
+                  sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/MasterSoft24/xUbuntu_17.04/ /' > /etc/apt/sources.list.d/cloudcross.list" 
+                  sudo apt-get update
+                  sudo apt-get install cloudcross;;
 esac
