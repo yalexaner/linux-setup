@@ -120,9 +120,3 @@ clear
 echo "MEGA Sync"
 sudo dpkg -i ../apps/megasync-xUbuntu_16.04_amd64.deb >progress.txt
 clear
-
-# My Apps
-echo "My Apps"
-
-tar -xjf ../apps/my_apps.tar.bz2
-mv my_../apps/* $HOME
