@@ -35,6 +35,11 @@ echo "Telegram"
 sudo snap install telegram-desktop
 clear
 
+# Deluge
+echo "Deluge"
+sudo apt-get install deluge
+clear
+
 # Sublime Text 3
 echo "Sublime Text 3"
 
@@ -71,9 +76,20 @@ echo "Vim"
 sudo apt-get install vim
 clear
 
-# Sporify
+# Deezer
+echo "Deezer"
+wget -qO "mellow-player" "https://bintray.com/colinduquesnoy/MellowPlayer/download_file?file_path=stable%2F3.5.0%2FMellowPlayer-x86_64.AppImage"
+clear
+
+# Spotify
 echo "Spotify"
 sudo snap install spotify
+clear
+
+# Steam
+echo "Steam"
+wget -q https://steamcdn-a.akamaihd.net/client/installer/steam.deb
+sudo dpkg -i steam.deg >progress.txt
 clear
 
 # Anki
