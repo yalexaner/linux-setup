@@ -75,6 +75,21 @@ echo "Spotify"
 sudo snap install spotify
 clear
 
+# Fast by Netflix
+echo "Fast"
+sudo snap install fast
+clear
+
+# matroska-tools (mkvtoolnix)
+echo "mkvtoolnix"
+sudo snap install matroska-tools
+clear
+
+# FFmpeg
+echo "FFmpeg"
+sudo snap install ffmpeg
+clear
+
 # Steam
 echo "Steam"
 wget -q https://steamcdn-a.akamaihd.net/client/installer/steam.deb
@@ -103,6 +118,11 @@ clear
 # VLC
 echo "VLC"
 sudo snap install vlc
+clear
+
+# Eye of Gnome (eog)
+echo "Eye of Gnome (eog)"
+sudo snap install eog
 clear
 
 # MEGA Sync
