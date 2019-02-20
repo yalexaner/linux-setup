@@ -5,6 +5,19 @@ echo "Configuring Yandex.Disk"
 yandex-disk setup
 clear
 
+# Windscribe
+echo "Configuring Windscribe"
+windscribe login
+
+read -p "Connect now? [y/n]: " action
+
+if [[ $action = 'y' ]]
+then
+    windscribe connect
+fi
+
+clear
+
 # Git
 echo "Configuring Git"
 
@@ -24,3 +37,5 @@ fi
 git config --global user.name $username
 git config --global user.email $email
 git config --global core.editor vim
+
+clear
