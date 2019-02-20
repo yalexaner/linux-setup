@@ -3,7 +3,7 @@
 # Grub
 clear
 
-read -p "Open grub settings? (y/n): " action
+read -p "Open grub settings? [y/n]: " action
 
 if [[ $action = 'y' ]]
 then
@@ -14,7 +14,7 @@ fi
 clear
 
 # Network connction
-read -p "Configure internet connection? (y/n): " action
+read -p "Configure internet connection? [y/n]: " action
 
 if [[ $action = 'y' ]]
 then
@@ -24,7 +24,7 @@ fi
 clear
 
 # Turning off useful services
-read -p "Disable useless services? (y/n): " action
+read -p "Disable useless services? [y/n]: " action
 
 if [[ $action = 'y' ]]
 then
@@ -37,9 +37,7 @@ clear
 # Installing apps
 echo "Installing apps"
 scripts/install_apps
-clear
 
 # Configure applications
 echo "Configuring applications"
 scripts/setting_apps
-clear
