@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# LastPass
+echo "Configuring LastPass"
+
+read -p "username: " username
+lpass login $username
+clear
+
 # Yandex.Disk
 echo "Configuring Yandex.Disk"
 yandex-disk setup

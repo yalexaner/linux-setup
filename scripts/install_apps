@@ -30,6 +30,11 @@ sudo apt-get install windscribe-cli
 
 clear
 
+# LastPass
+echo "LastPass"
+sudo apt install lastpass-cli
+clear
+
 # Opera
 echo "Opera"
 sudo snap install opera
