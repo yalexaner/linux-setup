@@ -8,8 +8,8 @@ fi
 
 case $1 in
     'kid3')       sudo apt-get install kid3;;
-    'chrome')     sudo dpkg -i ../apps/google-chrome-stable_current_amd64.deb >progress.txt;;
-    '4kdown')     sudo dpkg -i ../apps/4kvideodownloader_4.4.2-1_amd64.deb >progress.txt;;
+    'chrome')     sudo dpkg -i ../apps/google-chrome.deb >progress.txt;;
+    '4kdown')     sudo dpkg -i ../apps/4k-videodownloader.deb >progress.txt;;
     'firefox')    sudo snap install firefox;;
     'heroku')     sudo snap install heroku;;
     'simplenote') sudo snap install simplenote;;

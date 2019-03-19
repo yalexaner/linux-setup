@@ -113,13 +113,13 @@ clear
 # Steam
 echo "Steam"
 wget -q https://steamcdn-a.akamaihd.net/client/installer/steam.deb
-sudo dpkg -i steam.deg >progress.txt
+sudo dpkg -i steam.deb >progress.txt
 clear
 
 # Anki
 echo "Anki"
 
-tar -xjf ../apps/anki-2.0.50-amd64.tar.bz2
+tar -xjf ../apps/anki.tar.bz2
 cd anki-2.0.50
 sudo make install >progress.txt
 cd ..
@@ -147,5 +147,5 @@ clear
 
 # MEGA Sync
 echo "MEGA Sync"
-sudo dpkg -i ../apps/megasync-xUbuntu_16.04_amd64.deb >progress.txt
+sudo dpkg -i ../apps/megasync.deb >progress.txt
 clear
