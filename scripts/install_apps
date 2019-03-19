@@ -105,6 +105,11 @@ echo "FFmpeg"
 sudo snap install ffmpeg
 clear
 
+# Google Music Player
+echo "Google Music Player"
+sudo dpkg -i ../apps/google-music-player.deb >progress.txt
+clear
+
 # Steam
 echo "Steam"
 wget -q https://steamcdn-a.akamaihd.net/client/installer/steam.deb
