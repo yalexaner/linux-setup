@@ -144,8 +144,3 @@ clear
 echo "Eye of Gnome (eog)"
 sudo snap install eog
 clear
-
-# MEGA Sync
-echo "MEGA Sync"
-sudo dpkg -i ../apps/megasync.deb >progress.txt
-clear
