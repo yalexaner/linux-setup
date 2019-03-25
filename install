@@ -11,6 +11,7 @@ case $1 in
     'chrome')     sudo dpkg -i ../apps/google-chrome.deb >progress.txt;;
     '4kdown')     sudo dpkg -i ../apps/4k-videodownloader.deb >progress.txt;;
     'megasync')   sudo dpkg -i ../apps/megasync.deb >progress.txt;;
+    'pomodone')   sudo dpkg -i ../apps/pomodone.deb >progress.txt;;
     'firefox')    sudo snap install firefox;;
     'heroku')     sudo snap install heroku;;
     'simplenote') sudo snap install simplenote;;
