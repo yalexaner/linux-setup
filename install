@@ -1,40 +1,48 @@
 #!/bin/bash
 
-if [[ $1 == "--help" || $1 == "-h" ]]
-then
-    cat .help_message
-    exit 0
-fi
+function can_install {
+  programs='kid3 chrome 4kdown megasync pomodone firefox heroku simplenote atom corebird gitkraken tizonia ora tusk brave wavebox typora anoise cloudcross'
+
+  if echo $programs | grep -w $1 >/dev/null
+  then
+    echo "You can install $1"
+  else
+    echo "There is no such program as $1"
+  fi
+}
 
 case $1 in
-    'kid3')       sudo apt-get install kid3;;
-    'chrome')     sudo dpkg -i ../apps/google-chrome.deb >/dev/null 2>&1;;
-    '4kdown')     sudo dpkg -i ../apps/4k-videodownloader.deb >/dev/null 2>&1;;
-    'megasync')   sudo dpkg -i ../apps/megasync.deb >/dev/null 2>&1;;
-    'pomodone')   sudo dpkg -i ../apps/pomodone.deb >/dev/null 2>&1;;
-    'firefox')    sudo snap install firefox;;
-    'heroku')     sudo snap install heroku;;
-    'simplenote') sudo snap install simplenote;;
-    'atom')       sudo snap install atom;;
-    'corebird')   sudo snap install corebird;;
-    'gitkraken')  sudo snap install gitkraken;;
-    'tizonia')    sudo snap install tizonia;;
-    'ora')        sudo snap install ora;;
-    'tusk')       sudo snap install tusk;;
-    'brave')      sudo snap install brave;;
-    'wavebox')    sudo snap install wavebox;;
-    'zenkit')     sudo snap install zenkit;;
-    'typora')
-                  sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA300B7755AFCFAE
-                  sudo add-apt-repository 'deb https://typora.io/linux ./'
-                  sudo apt-get update
-                  sudo apt-get install typora;;
-    'anoise')
-                  sudo add-apt-repository ppa:costales/anoise
-                  sudo apt-get update
-                  sudo apt-get install anoise;;
-    'cloudcross')
-                  sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/MasterSoft24/xUbuntu_17.04/ /' > /etc/apt/sources.list.d/cloudcross.list" 
-                  sudo apt-get update
-                  sudo apt-get install cloudcross;;
+  '--help' | '-h') cat .help_message;;
+  '--find' | '-f') can_install $2;;
+
+  'kid3')       sudo apt-get install kid3;;
+  'chrome')     sudo dpkg -i ../apps/google-chrome.deb >/dev/null 2>&1;;
+  '4kdown')     sudo dpkg -i ../apps/4k-videodownloader.deb >/dev/null 2>&1;;
+  'megasync')   sudo dpkg -i ../apps/megasync.deb >/dev/null 2>&1;;
+  'pomodone')   sudo dpkg -i ../apps/pomodone.deb >/dev/null 2>&1;;
+  'firefox')    sudo snap install firefox;;
+  'heroku')     sudo snap install heroku;;
+  'simplenote') sudo snap install simplenote;;
+  'atom')       sudo snap install atom;;
+  'corebird')   sudo snap install corebird;;
+  'gitkraken')  sudo snap install gitkraken;;
+  'tizonia')    sudo snap install tizonia;;
+  'ora')        sudo snap install ora;;
+  'tusk')       sudo snap install tusk;;
+  'brave')      sudo snap install brave;;
+  'wavebox')    sudo snap install wavebox;;
+  'zenkit')     sudo snap install zenkit;;
+  'typora')
+                sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA300B7755AFCFAE
+                sudo add-apt-repository 'deb https://typora.io/linux ./'
+                sudo apt-get update
+                sudo apt-get install typora;;
+  'anoise')
+                sudo add-apt-repository ppa:costales/anoise
+                sudo apt-get update
+                sudo apt-get install anoise;;
+  'cloudcross')
+                sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/MasterSoft24/xUbuntu_17.04/ /' > /etc/apt/sources.list.d/cloudcross.list" 
+                sudo apt-get update
+                sudo apt-get install cloudcross;;
 esac
