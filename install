@@ -8,10 +8,10 @@ fi
 
 case $1 in
     'kid3')       sudo apt-get install kid3;;
-    'chrome')     sudo dpkg -i ../apps/google-chrome.deb >progress.txt;;
-    '4kdown')     sudo dpkg -i ../apps/4k-videodownloader.deb >progress.txt;;
-    'megasync')   sudo dpkg -i ../apps/megasync.deb >progress.txt;;
-    'pomodone')   sudo dpkg -i ../apps/pomodone.deb >progress.txt;;
+    'chrome')     sudo dpkg -i ../apps/google-chrome.deb >/dev/null 2>&1;;
+    '4kdown')     sudo dpkg -i ../apps/4k-videodownloader.deb >/dev/null 2>&1;;
+    'megasync')   sudo dpkg -i ../apps/megasync.deb >/dev/null 2>&1;;
+    'pomodone')   sudo dpkg -i ../apps/pomodone.deb >/dev/null 2>&1;;
     'firefox')    sudo snap install firefox;;
     'heroku')     sudo snap install heroku;;
     'simplenote') sudo snap install simplenote;;

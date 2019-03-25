@@ -107,13 +107,13 @@ clear
 
 # Google Music Player
 echo "Google Music Player"
-sudo dpkg -i ../apps/google-music-player.deb >progress.txt
+sudo dpkg -i ../apps/google-music-player.deb >/dev/null 2>&1
 clear
 
 # Steam
 echo "Steam"
 wget -q https://steamcdn-a.akamaihd.net/client/installer/steam.deb
-sudo dpkg -i steam.deb >progress.txt
+sudo dpkg -i steam.deb >/dev/null 2>&1
 clear
 
 # Anki
@@ -121,7 +121,7 @@ echo "Anki"
 
 tar -xjf ../apps/anki.tar.bz2
 cd anki-2.0.50
-sudo make install >progress.txt
+sudo make install >/dev/null 2>&1
 cd ..
 rm -rf anki-2.0.50
 
