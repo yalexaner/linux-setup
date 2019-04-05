@@ -62,7 +62,7 @@ clear
 
 # VS Code
 echo "VS Code"
-sudo snap install vscode
+sudo snap install code --classic
 clear
 
 # Git
