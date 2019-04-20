@@ -13,6 +13,7 @@ function can_install {
 
 case $1 in
   '--help' | '-h') cat .help_message;;
+  '--list' | '-l') cat .app_list;;
   '--find' | '-f') can_install $2;;
 
   'kid3')       sudo apt-get install kid3;;

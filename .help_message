@@ -1,23 +1,7 @@
-/-----------------------------------------------\
-|       Availible for installing programs       |
-|-----------------------------------------------|
-|   kid3            an audio tags editor        |
-|   chrome          a web browser               |
-|   4kdown          YouTube video downloader    |
-|   megasync        Mega Sync client            |
-|   pomodone        Pomodoro app                |
-|   firefox         a web browser               |
-|   heroku          a heroku app                |
-|   simplenote      a simple note keeper        |
-|   atom            a text editor               |
-|   corebird        Twitter client              |
-|   gitkraken       git GIU client              |
-|   tizonia         command-line music player   |
-|   ora             a task management app       |
-|   tusk            Evernote desktop app        |
-|   brave           a web browser               |
-|   wavebox         an email client for Gmail   |
-|   typora          a markdown editor           |
-|   anoise          a noise player              |
-|   cloudcross      a synchronization client    |
-\-----------------------------------------------/
+Using:
+    install *app name*
+
+Options:
+    -h | --help:    this help message
+    -l | --list:    list of all apps that can be installed
+    -f | --find:    finds if given app can be installed
