@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Hyper
+Exec=/home/yalexaner/AppImages/hyper.AppImage
+Icon=/home/yalexaner/AppImages/hyper.png
+Type=Application
+StartupNotify=true
+Categories=Development;

@@ -7,6 +7,10 @@ read -p "username: " username
 lpass login $username
 clear
 
+# Hyper
+sudo cp config/hyper.desktop /use/share/applications/hyper.desktop
+sudo chmod +x /use/share/applications/hyper.desktop
+
 # Yandex.Disk
 echo "Configuring Yandex.Disk"
 yandex-disk setup
