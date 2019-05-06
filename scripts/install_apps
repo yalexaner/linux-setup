@@ -30,6 +30,11 @@ sudo apt-get install windscribe-cli
 
 clear
 
+# Hyper
+echo "Hyper"
+sudo dpkg -i ../apps/hyper_3.deb >/dev/null 2>&1
+clear
+
 # LastPass
 echo "LastPass"
 sudo apt install lastpass-cli
