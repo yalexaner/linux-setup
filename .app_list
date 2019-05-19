@@ -1,23 +1,28 @@
-/-----------------------------------------------\
-|       Availible for installing programs       |
-|-----------------------------------------------|
-|   kid3            an audio tags editor        |
-|   chrome          a web browser               |
-|   4kdown          YouTube video downloader    |
-|   megasync        Mega Sync client            |
-|   pomodone        Pomodoro app                |
-|   firefox         a web browser               |
-|   heroku          a heroku app                |
-|   simplenote      a simple note keeper        |
-|   atom            a text editor               |
-|   corebird        Twitter client              |
-|   gitkraken       git GIU client              |
-|   tizonia         command-line music player   |
-|   ora             a task management app       |
-|   tusk            Evernote desktop app        |
-|   brave           a web browser               |
-|   wavebox         an email client for Gmail   |
-|   typora          a markdown editor           |
-|   anoise          a noise player              |
-|   cloudcross      a synchronization client    |
-\-----------------------------------------------/
+All availible programs
+
+MEDIA
+  — kid3     audio tag editor
+  — anoise   player of nature noises
+  — tizonia  command-line music player
+
+BROWSERS
+  — brave     web browser
+  — chrome    web browser
+  — firefox   web browser
+  — corebird  Twitter client
+
+TEXT EDITORS
+  — atom        text editor
+  — tusk        Evernote desktop app
+  — typora      markdown editor
+  — simplenote  simple note keeper
+
+TOOLS
+  — ora         task management app
+  — heroku      heroku app
+  — 4kdown      YouTube video downloader
+  — wavebox     email client for Gmail
+  — megasync    Mega Sync client
+  — pomodone    Pomodoro app
+  — gitkraken   git GIU client
+  — cloudcross  synchronization client
