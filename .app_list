@@ -1,9 +1,12 @@
 All availible programs
 
 MEDIA
-  — kid3     audio tag editor
-  — anoise   player of nature noises
-  — tizonia  command-line music player
+  — kid3        audio tag editor
+  — steam       game store
+  — anoise      player of nature noises
+  — deezer      Deezer player
+  — tizonia     command-line music player
+  — ggl_player  google play music player
 
 BROWSERS
   — brave     web browser
@@ -19,10 +22,15 @@ TEXT EDITORS
 
 TOOLS
   — ora         task management app
+  — fast        command-line speed test
+  — anki        flash card app
   — heroku      heroku app
+  — ffmpeg      video and audio processing
   — 4kdown      YouTube video downloader
   — wavebox     email client for Gmail
   — megasync    Mega Sync client
   — pomodone    Pomodoro app
   — gitkraken   git GIU client
+  — mkvtoolnix  mkv file processing
+  — windscribe  vpn client
   — cloudcross  synchronization client

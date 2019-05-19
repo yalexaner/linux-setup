@@ -46,4 +46,29 @@ case $1 in
                 sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/MasterSoft24/xUbuntu_17.04/ /' > /etc/apt/sources.list.d/cloudcross.list" 
                 sudo apt-get update
                 sudo apt-get install cloudcross;;
+  'windscribe')
+                echo "Windscribe. VPN for Linux"
+                sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key FDC247B7
+                echo 'deb https://repo.windscribe.com/ubuntu zesty main' | sudo tee /etc/apt/sources.list.d/windscribe-repo.list
+                sudo apt-get update
+                sudo apt-get install windscribe-cli;;
+  'anki')       
+                echo "Anki"
+                tar -xjf ../apps/anki.tar.bz2
+                cd anki-2.0.50
+                sudo make install >/dev/null 2>&1
+                cd ..
+                rm -rf anki-2.0.50
+
+                # mplayer (for Anki)
+                sudo apt-get install mplayer;;
+  'steam')      
+                echo "Steam"
+                wget -q https://steamcdn-a.akamaihd.net/client/installer/steam.deb
+                sudo dpkg -i steam.deb >/dev/null 2>&1;;
+  'ggl_player') echo "Google Music Player" && sudo dpkg -i ../apps/google-music-player.deb >/dev/null 2>&1;;
+  'ffmpeg')     echo "FFmpeg" && sudo snap install ffmpeg;;
+  'mkvtoolnix') echo "mkvtoolnix" && sudo snap install matroska-tools;;
+  'fast')       echo "Fast by Netflix" && sudo snap install fast;;
+  'deezer')     echo "Deezer" && wget -qO "mellow-player" "https://bintray.com/colinduquesnoy/MellowPlayer/download_file?file_path=stable%2F3.5.0%2FMellowPlayer-x86_64.AppImage";;
 esac

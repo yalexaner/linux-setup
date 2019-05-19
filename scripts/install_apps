@@ -20,16 +20,6 @@ sudo apt-get install yandex-browser-beta
 
 clear
 
-# Windscribe
-echo "Windscribe. VPN for Linux"
-
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key FDC247B7
-echo 'deb https://repo.windscribe.com/ubuntu zesty main' | sudo tee /etc/apt/sources.list.d/windscribe-repo.list
-sudo apt-get update
-sudo apt-get install windscribe-cli
-
-clear
-
 # Hyper
 echo "Hyper"
 sudo dpkg -i ../apps/hyper_3.deb >/dev/null 2>&1
@@ -85,54 +75,9 @@ echo "Vim"
 sudo apt-get install vim
 clear
 
-# Deezer
-echo "Deezer"
-wget -qO "mellow-player" "https://bintray.com/colinduquesnoy/MellowPlayer/download_file?file_path=stable%2F3.5.0%2FMellowPlayer-x86_64.AppImage"
-clear
-
 # Spotify
 echo "Spotify"
 sudo snap install spotify
-clear
-
-# Fast by Netflix
-echo "Fast"
-sudo snap install fast
-clear
-
-# matroska-tools (mkvtoolnix)
-echo "mkvtoolnix"
-sudo snap install matroska-tools
-clear
-
-# FFmpeg
-echo "FFmpeg"
-sudo snap install ffmpeg
-clear
-
-# Google Music Player
-echo "Google Music Player"
-sudo dpkg -i ../apps/google-music-player.deb >/dev/null 2>&1
-clear
-
-# Steam
-echo "Steam"
-wget -q https://steamcdn-a.akamaihd.net/client/installer/steam.deb
-sudo dpkg -i steam.deb >/dev/null 2>&1
-clear
-
-# Anki
-echo "Anki"
-
-tar -xjf ../apps/anki.tar.bz2
-cd anki-2.0.50
-sudo make install >/dev/null 2>&1
-cd ..
-rm -rf anki-2.0.50
-
-# mplayer (for Anki)
-sudo apt-get install mplayer
-
 clear
 
 # Okular
