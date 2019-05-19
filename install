@@ -12,8 +12,8 @@ function can_install {
 }
 
 case $1 in
-  '--help' | '-h') cat .help_message;;
-  '--list' | '-l') cat .app_list;;
+  '--help' | '-h') less .help_message || cat .help_message;;
+  '--list' | '-l') less .app_list || cat .app_list;;
   '--find' | '-f') can_install $2;;
 
   'kid3')       sudo apt-get install kid3;;
